@@ -84,10 +84,11 @@ namespace MownicaKlient
             {
                 string tekst = txtWysylanie.Text;
                 if (tekst == "") { txtWysylanie.Focus(); return; }
-                if (tekst[tekst.Length - 1] == '\n') { tekst = tekst.TrimEnd('\n'); }
+                if (tekst[tekst.Length - 1] == '\n'){tekst = tekst.TrimEnd('\n');}
                 w.Write(tekst);
-                wyswietl(txtWysylanie, "===Ja===\n" + tekst + '\n');
+                wyswietl(txtOdbieranie, "===Ja===\n" + tekst + '\n');
                 txtWysylanie.Text = "";
+                
             }
             catch { }
         }
